@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wolt Promo Code</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f6f6f6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #0062ff;
+            color: white;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.2em;
+        }
+        .promo-code-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 80%;
+            margin: 50px auto;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .promo-code {
+            font-size: 2em;
+            font-weight: bold;
+            margin: 20px 0;
+            padding: 10px;
+            border: 3px dashed #0062ff;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        button {
+            background-color: #0062ff;
+            color: white;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #004cbb;
+        }
+        footer {
+            background-color: #0062ff;
+            color: white;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Wolt Promo Code</h1>
+        <p>Save on your next food delivery</p>
+    </header>
+php
+Copy code
+<div class="promo-code-container">
+    <p>Use the promo code below to save on your first Wolt order:</p>
+    <div class="promo-code">WOLT10OFF</div>
+    <p>Share this code with your friends and let them enjoy the discount too!</p>
+    <button onclick="copyToClipboard()">Copy Code</button>
+</div>
+
+<footer>
+    <p>&copy; 2023 Wolt. All Rights Reserved.</p>
+</footer>
+
+<script>
+    function copyToClipboard() {
+        const code = document.querySelector('.promo-code').innerText;
+        const textarea = document.createElement('textarea');
+        textarea.value = code;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+        alert('Promo code copied to clipboard!');
+    }
+</script>
+</body>
+</html>
